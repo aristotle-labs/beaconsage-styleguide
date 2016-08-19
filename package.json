@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/aristotle-labs/beaconsage-styleguide/issues"
   },
-  "homepage": "https://github.com/aristotle-labs/beaconsage-styleguide#readme"
+  "homepage": "https://github.com/aristotle-labs/beaconsage-styleguide#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
 }
