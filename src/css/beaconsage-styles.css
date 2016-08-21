@@ -868,8 +868,13 @@ _:-ms-fullscreen, :root .grid__cell {
 .nav {
   background: black; }
 
+.nav__logo-container {
+  padding: 0em 1em;
+  text-align: center; }
+
 .nav__logo {
-  max-width: 175px; }
+  max-width: 150px;
+  margin: 0 0 0 auto; }
 
 .nav__items {
   display: flex;
@@ -878,7 +883,7 @@ _:-ms-fullscreen, :root .grid__cell {
   list-style-type: none;
   text-align: center;
   padding: 0;
-  margin: 0px 15px; }
+  margin: 0px; }
 
 .nav__item {
   color: #BFC0BF;
@@ -887,11 +892,30 @@ _:-ms-fullscreen, :root .grid__cell {
   display: inline-block;
   margin-bottom: 0;
   text-align: center;
-  padding: 1.8em 0.5em;
+  padding: 0em 1em;
   margin: 0;
-  cursor: pointer; }
+  cursor: pointer;
+  position: relative; }
+  .nav__item:not(:first-child):not(:last-child)::before {
+    content: "";
+    border: 1px solid rgba(191, 192, 191, 0.3);
+    position: absolute;
+    left: -0.5px;
+    top: 15px;
+    height: 40%; }
+  .nav__item:not(:first-child):not(:last-child)::after {
+    content: "";
+    border: 1px solid rgba(191, 192, 191, 0.3);
+    position: absolute;
+    right: -0.5px;
+    top: 15px;
+    height: 40%; }
+  .nav__item > li {
+    padding: 1em 0em; }
   .nav__item:hover {
     text-decoration: underline; }
   .nav__item--active {
     color: white;
-    background: #AC0016; }
+    text-decoration: underline; }
+    .nav__item--active > li {
+      background: #AC0016; }
