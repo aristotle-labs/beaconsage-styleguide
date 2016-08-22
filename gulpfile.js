@@ -4,8 +4,16 @@ var browserSync = require('browser-sync').create();
 var scsslint = require('gulp-scss-lint');
 var autoprefixer = require('gulp-autoprefixer');
 
+gulp.task('check-sass', function() {
+  return gulp.src(['scss/*.scss', 'scss/partials/*.scss']) // Gets all files ending with .scss
+    .pipe(scsslint({'config': 'lint.yml'}))
+    .pipe(browserSync.reload({
+        stream: true
+    }))
+});
+
 gulp.task('sass', function() {
-  return gulp.src('scss/*.scss') // Gets all files ending with .scss in app/scss and children dirs
+  return gulp.src('scss/*.scss') // Gets all files ending with .scss
     .pipe(scsslint({'config': 'lint.yml'}))
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
@@ -24,6 +32,6 @@ gulp.task('browserSync', function() {
 })
 
 gulp.task('watch', ['browserSync', 'sass'], function (){
-  	gulp.watch('scss/*.scss', ['sass']);
+  	gulp.watch('scss/**/*.scss', ['check-sass', 'sass']);
 });
 

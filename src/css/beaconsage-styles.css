@@ -871,7 +871,7 @@ body {
 .footer {
   background: #474747;
   color: #cacaca;
-  padding: 15px; }
+  padding: 25px 50px; }
 
 .footer__logo {
   max-width: 250px; }
@@ -938,8 +938,19 @@ body {
   .nav__item--active {
     color: #fff; }
     .nav__item--active > li {
-      background: #ac0016; }
+      background: #c72220; }
 
 .main {
-  background: #e8e9e8;
-  padding: 15px; }
+  background: #e8e9e8; }
+
+.header {
+  background: #c72220 url("../img/header-background.png") no-repeat center center;
+  background-size: cover;
+  height: 155px;
+  padding: 25px 50px; }
+
+.header__title {
+  color: #fff;
+  font-size: 4em;
+  font-weight: 100;
+  margin: 0; }

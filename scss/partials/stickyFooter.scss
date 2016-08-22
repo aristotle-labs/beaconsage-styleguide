@@ -1,0 +1,25 @@
+//Sticky Footer Styles
+html {
+	height: 100%;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+.footer {
+	background: $footer-background;
+	color: $footer-text;
+	padding: $content-padding;
+}
+
+.footer__logo {
+	max-width: 250px;
+}
+
+.not-footer {
+	background: $main-background-color;
+	flex: 1;
+}

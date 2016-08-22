@@ -1,0 +1,66 @@
+// Nav Styles
+.nav {
+	background: $black;
+}
+
+.nav__logo-container {
+	padding: 0 1em;
+	text-align: center;
+}
+
+.nav__logo {
+	margin: 0 0 0 auto;
+	max-width: 150px;
+}
+
+.nav__items {
+	display: flex;
+	flex-direction: row;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.nav__item {
+	color: $gray-text;
+	cursor: pointer;
+	display: inline-block;
+	flex: 1 1 auto;
+	margin: 0;
+	padding: 0 1em;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	&:not(:first-child):not(:last-child)::before {
+		border: 1px solid $nav-divider-color;
+		content: '';
+		height: 40%;
+		left: -.5px;
+		position: absolute;
+		top: 15px;
+	}
+
+	&:not(:first-child):not(:last-child)::after {
+		border: 1px solid $nav-divider-color;
+		content: '';
+		height: 40%;
+		position: absolute;
+		right: -.5px;
+		top: 15px;
+	}
+
+	li {
+		padding: 1em 0;
+	}
+
+	&--active {
+		color: $white;
+
+		> li {
+			background: $red;
+		}
+	}
+}
