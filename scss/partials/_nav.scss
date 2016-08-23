@@ -28,7 +28,7 @@
 	display: inline-block;
 	flex: 1 1 auto;
 	margin: 0;
-	padding: 0 1em;
+	padding: 0;
 	position: relative;
 	text-align: center;
 	text-decoration: none;
@@ -62,5 +62,11 @@
 		> li {
 			background: $red;
 		}
+	}
+}
+
+@media (min-width: $reflex-sm) {
+	.nav__item {
+		padding: 0 1em;
 	}
 }
