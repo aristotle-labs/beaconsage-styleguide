@@ -21,6 +21,7 @@
 	margin-top: 35px;
 	overflow-x: scroll;
 	overflow-y: hidden;
+	padding-bottom: 1px;
 	white-space: nowrap;
 	width: 100%;
 }
@@ -33,17 +34,8 @@
 	text-transform: uppercase;
 
 	&--active {
+		border-bottom: 1px solid $white;
 		color: $white;
-	}
-
-	&--active::before {
-		background: $white;
-		bottom: -15px;
-		content: '';
-		height: 2px;
-		left: 0;
-		position: absolute;
-		width: 100%;
 	}
 
 	&:not(:first-child) {
