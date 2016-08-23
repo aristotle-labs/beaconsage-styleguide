@@ -20,14 +20,16 @@ audio:not([controls]) {
   display: none;
   height: 0; }
 
-[hidden], template {
+[hidden],
+template {
   display: none; }
 
 html {
   background: #fff;
   color: #000;
   -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%; }
+      -ms-text-size-adjust: 100%;
+          text-size-adjust: 100%; }
 
 html,
 button,
@@ -92,16 +94,13 @@ samp {
   font-size: 1em; }
 
 pre {
-  white-space: pre;
   white-space: pre-wrap;
   word-wrap: break-word; }
 
 q {
-  quotes: "\201C" "\201D" "\2018" "\2019"; }
-
-q:before, q:after {
-  content: '';
-  content: none; }
+  quotes: '\201C' '\201D' '\2018' '\2019'; }
+  q::before, q::after {
+    content: none; }
 
 small {
   font-size: 80%; }
@@ -114,10 +113,10 @@ sup {
   vertical-align: baseline; }
 
 sup {
-  top: -0.5em; }
+  top: -.5em; }
 
 sub {
-  bottom: -0.25em; }
+  bottom: -.25em; }
 
 img {
   border: 0; }
@@ -131,7 +130,7 @@ figure {
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em; }
+  padding: .35em .625em .75em; }
 
 legend {
   border: 0;
@@ -147,8 +146,13 @@ textarea {
   margin: 0;
   vertical-align: baseline; }
 
-button, input {
+button,
+input {
   line-height: normal; }
+  button::-moz-focus-inner,
+  input::-moz-focus-inner {
+    border: 0;
+    padding: 0; }
 
 button,
 select {
@@ -165,10 +169,6 @@ button[disabled],
 input[disabled] {
   cursor: default; }
 
-button::-moz-focus-inner, input::-moz-focus-inner {
-  border: 0;
-  padding: 0; }
-
 textarea {
   overflow: auto;
   vertical-align: top; }
@@ -179,9 +179,12 @@ table {
 
 input[type="search"] {
   -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
   box-sizing: content-box; }
   input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none; }
+    -webkit-appearance: none;
+            appearance: none; }
 
 input[type="checkbox"], input[type="radio"] {
   box-sizing: border-box;
@@ -946,11 +949,36 @@ body {
 .header {
   background: #c72220 url("../img/header-background.png") no-repeat center center;
   background-size: cover;
-  height: 155px;
-  padding: 25px 50px; }
+  padding: 25px 50px 15px; }
 
 .header__title {
   color: #fff;
   font-size: 4em;
   font-weight: 100;
   margin: 0; }
+
+.header__nav-items {
+  margin-top: 35px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  width: 100%; }
+
+.header__nav-item {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 18px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase; }
+  .header__nav-item--active {
+    color: #fff; }
+  .header__nav-item--active::before {
+    background: #fff;
+    bottom: -15px;
+    content: '';
+    height: 2px;
+    left: 0;
+    position: absolute;
+    width: 100%; }
+  .header__nav-item:not(:first-child) {
+    padding-left: 25px; }

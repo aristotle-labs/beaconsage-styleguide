@@ -1,0 +1,46 @@
+.header {
+	background: $red url('../img/header-background.png') no-repeat center center;
+	background-size: cover;
+	padding: 25px 50px 15px;
+}
+
+.header__title {
+	color: $white;
+	font-size: 4em;
+	font-weight: 100;
+	margin: 0;
+}
+
+.header__nav-items {
+	margin-top: 35px;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	white-space: nowrap;
+	width: 100%;
+}
+
+.header__nav-item {
+	color: $pale-white;
+	font-size: 18px;
+	position: relative;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	&--active {
+		color: $white;
+	}
+
+	&--active::before {
+		background: $white;
+		bottom: -15px;
+		content: '';
+		height: 2px;
+		left: 0;
+		position: absolute;
+		width: 100%;
+	}
+
+	&:not(:first-child) {
+		padding-left: 25px;
+	}
+}
