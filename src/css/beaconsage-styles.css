@@ -917,7 +917,7 @@ body {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   margin: 0;
-  padding: 0 1em;
+  padding: 0;
   position: relative;
   text-align: center;
   text-decoration: none;
@@ -943,13 +943,21 @@ body {
     .nav__item--active > li {
       background: #c72220; }
 
+@media (min-width: 768px) {
+  .nav__item {
+    padding: 0 1em; } }
+
 .main {
   background: #e8e9e8; }
 
 .header {
   background: #c72220 url("../img/header-background.png") no-repeat center center;
   background-size: cover;
-  padding: 25px 50px 15px; }
+  padding: 20px 25px 15px; }
+
+@media (min-width: 768px) {
+  .header {
+    padding: 25px 50px 15px; } }
 
 .header__title {
   color: #fff;
