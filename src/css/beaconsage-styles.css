@@ -969,6 +969,7 @@ body {
   margin-top: 35px;
   overflow-x: scroll;
   overflow-y: hidden;
+  padding-bottom: 1px;
   white-space: nowrap;
   width: 100%; }
 
@@ -979,14 +980,7 @@ body {
   text-decoration: none;
   text-transform: uppercase; }
   .header__nav-item--active {
+    border-bottom: 1px solid #fff;
     color: #fff; }
-  .header__nav-item--active::before {
-    background: #fff;
-    bottom: -15px;
-    content: '';
-    height: 2px;
-    left: 0;
-    position: absolute;
-    width: 100%; }
   .header__nav-item:not(:first-child) {
     padding-left: 25px; }
